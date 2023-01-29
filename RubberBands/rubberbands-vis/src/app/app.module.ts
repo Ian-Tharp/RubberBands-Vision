@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RetirementPlanningComponent } from './retirement-planning/retirement-planning.component';
 import { BudgetComponent } from './budget/budget.component';
+import { PracticeComponent } from './practice/practice.component';
+import { NgxEchartsModule } from 'ngx-echarts'
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     RetirementPlanningComponent,
-    BudgetComponent
+    BudgetComponent,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
